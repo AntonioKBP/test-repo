@@ -1,13 +1,11 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 // Change code below this line
+import SimpleLightbox from 'simplelightbox';
+// Дополнительный импорт стилей
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 console.log(galleryItems);
-
-// // Описан в документации
-// import SimpleLightbox from 'simplelightbox';
-// // Дополнительный импорт стилей
-// import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const galleryMainDiv = document.querySelector('.gallery');
 // console.log(galleryMainDiv);
@@ -34,7 +32,7 @@ function onPictureClick(event) {
   console.log(event);
 }
 
-// var lightbox = new SimpleLightbox('.gallery__item', {
-//   captionsData: 'alt',
-//   captionDelay: 250,
-// });
+var lightbox = new SimpleLightbox('.gallery__item', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
