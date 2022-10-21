@@ -1,0 +1,10 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  flex-direction: column;
+  gap: 16px;
+  background: #000;
+}
