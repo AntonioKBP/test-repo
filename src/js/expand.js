@@ -18,6 +18,13 @@ const cards = document.querySelectorAll('.card');
 for (let i = 0; i < cards.length; i += 1) {
   cards[i].style.backgroundColor = getRandomHexColor();
   cards[i].addEventListener('click', () => {
+    removeClassActive();
     cards[i].classList.add('active');
   });
+}
+
+function removeClassActive() {
+  for (let i = 0; i < cards.length; i += 1) {
+    cards[i].classList.remove('active');
+  }
 }
