@@ -1,0 +1,2 @@
+var _loop=function(o){cards[o].style.backgroundColor=getRandomHexColor(),cards[o].addEventListener("click",(function(){removeClassActive(),cards[o].classList.add("active")}))};function getRandomHexColor(){return"#".concat(Math.floor(16777215*Math.random()).toString(16).padStart(6,0))}for(var cards=document.querySelectorAll(".card"),i=0;i<cards.length;i+=1)_loop(i);function removeClassActive(){for(var o=0;o<cards.length;o+=1)cards[o].classList.remove("active")}
+//# sourceMappingURL=expand.bd1607ca.js.map
