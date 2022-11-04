@@ -13,6 +13,8 @@ const refs = {
   clockFace: document.querySelector('.js-clockface'),
 };
 
+console.log(refs);
+
 class Timer {
   constructor({ onTick }) {
     this.intervalId = null;
