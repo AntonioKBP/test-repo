@@ -1,2 +1,0 @@
-var cake;refs={div1:document.querySelector("container"),div2:document.querySelector("containerFinally")};var birthday=new Promise((function(e,n){var t=Math.random()>.5;setTimeout((function(){t?e(cake="Cake is completed 🎂"):n(cake="Cake is Lost 🤨")}),1e3)}));birthday.then((function(e){return refs.div1.innerHTML="Celebrating with Cake 🎂✅ + ".concat(e)})).catch((function(e){return refs.div1.innerHTML="Without Cake 🎂❌ + ".concat(e)})).finally((function(){return refs.div2.innerHTML="We celebrate the birthday party💝"}));
-//# sourceMappingURL=promises.e1334159.js.map
