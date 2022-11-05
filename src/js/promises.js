@@ -28,29 +28,29 @@
 
 // ===========================================================================
 
-// refs = {
-//   div1: document.querySelector('container'),
-//   div2: document.querySelector('containerFinally'),
-// };
-// let cake;
-// const birthday = new Promise((resolve, reject) => {
-//   const number = Math.random() > 0.5;
-//   setTimeout(() => {
-//     if (number) {
-//       cake = 'Cake is completed 🎂';
-//       resolve(cake);
-//     } else {
-//       cake = 'Cake is Lost 🤨';
-//       reject(cake);
-//     }
-//   }, 1000);
-// });
+refs = {
+  div1: document.querySelector('container'),
+  div2: document.querySelector('containerFinally'),
+};
+let cake;
+const birthday = new Promise((resolve, reject) => {
+  const number = Math.random() > 0.5;
+  setTimeout(() => {
+    if (number) {
+      cake = 'Cake is completed 🎂';
+      resolve(cake);
+    } else {
+      cake = 'Cake is Lost 🤨';
+      reject(cake);
+    }
+  }, 1000);
+});
 
-// birthday
-//   .then(data => (refs.div1.innerHTML = `Celebrating with Cake 🎂✅ + ${data}`))
+birthday
+  .then(data => (refs.div1.innerHTML = `Celebrating with Cake 🎂✅ + ${data}`))
 
-//   .catch(error => (refs.div1.innerHTML = `Without Cake 🎂❌ + ${error}`))
-//   .finally(() => (refs.div2.innerHTML = 'We celebrate the birthday party💝'));
+  .catch(error => (refs.div1.innerHTML = `Without Cake 🎂❌ + ${error}`))
+  .finally(() => (refs.div2.innerHTML = 'We celebrate the birthday party💝'));
 
 // ====================================================
 
@@ -66,3 +66,18 @@
 // Promise.race([sleep(1500), sleep(2000), sleep(2500), sleep(1000)]).then(data =>
 //   console.log('Race --> finished')
 // );
+
+// ============================================================
+
+// const promise = new Promise((resolve, reject) => {
+//   resolve({ key: 'value' });
+//   //   reject({ key: 'failure' });
+// });
+// // console.log(promise);
+// promise
+//   .then(response => {
+//     console.log('then 1 -->', response);
+//     return Object.keys(response);
+//   })
+//   .then(response => console.log('then 2 -->', response))
+//   .catch(error => console.log(error));
