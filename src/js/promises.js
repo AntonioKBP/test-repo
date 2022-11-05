@@ -81,3 +81,32 @@
 //   })
 //   .then(response => console.log('then 2 -->', response))
 //   .catch(error => console.log(error));
+
+// ============================================================
+
+const timeout = (delay, data) =>
+  new Promise(resolve => {
+    setTimeout(() => {
+      resolve(data);
+    }, delay);
+  });
+
+// timeout(2000, { key: 'Hello Promise' }).then(res => console.log(res));
+
+const timeOutsAll = Promise.all([
+  timeout(2000, { key: 'I am 2 seconds' }),
+  timeout(1500, { key: 'I am 1.5 seconds' }),
+  timeout(1000, { key: 'I am 1 second' }),
+  timeout(3000, { key: 'I am 3 seconds' }),
+]);
+
+timeOutsAll.then(res => console.log(res));
+
+const timeOutsRace = Promise.race([
+  timeout(2000, { key: 'I am 2 seconds' }),
+  timeout(1500, { key: 'I am 1.5 seconds' }),
+  timeout(1000, { key: 'I am 1 second' }),
+  timeout(3000, { key: 'I am 3 seconds' }),
+]);
+
+timeOutsRace.then(res => console.log(res));
